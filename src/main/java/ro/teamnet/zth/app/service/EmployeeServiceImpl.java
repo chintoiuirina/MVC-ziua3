@@ -23,4 +23,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         EmployeeDao employeeDao= new EmployeeDao();
         return employeeDao.getEmployeeById(Id);
     }
+
+    @Override
+    public void deleteEmployee(Integer id) {
+        new EmployeeDao().deleteEmployee(new EmployeeDao().getEmployeeById(id));
+    }
 }

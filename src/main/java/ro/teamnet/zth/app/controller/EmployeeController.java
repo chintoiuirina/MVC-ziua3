@@ -1,28 +1,38 @@
 package ro.teamnet.zth.app.controller;
 
-import ro.teamnet.zth.api.annotations.MyController;
-import ro.teamnet.zth.api.annotations.MyParam;
-import ro.teamnet.zth.api.annotations.MyRequestMethod;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 import ro.teamnet.zth.app.domain.Employee;
 import ro.teamnet.zth.app.service.EmployeeService;
 import ro.teamnet.zth.app.service.EmployeeServiceImpl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Irina on 06.05.2015.
  */
-@MyController(urlPath = "/employees")
+@Controller
+@RequestMapping(value = "/employees")
+
 public class EmployeeController {
-    @MyRequestMethod(urlPath = "/one", methodType = "GET")
-    public Employee getOneEmployee(@MyParam(name ="idEmployee") String idEmployee) {
+
+    @RequestMapping(method = RequestMethod.GET,value = "{idEmployee}")
+    public @ResponseBody Employee getOneEmployee(@PathVariable(value="idEmployee") String idEmployee) {
         EmployeeService employeeService=new EmployeeServiceImpl();
         return employeeService.findOneEmployee(Integer.parseInt(idEmployee));
     }
+    @RequestMapping(method = RequestMethod.DELETE,value = "{idEmployee}")
+    public @ResponseBody String deleteOneEmployee(@PathVariable(value="idEmployee") String idEmployee) {
+        EmployeeService employeeService=new EmployeeServiceImpl();
+        employeeService.deleteEmployee(Integer.parseInt(idEmployee));
+        return "Sters!";
+    }
 
-    @MyRequestMethod(urlPath = "/all", methodType = "GET")
-    public List<Employee> getAllEmployees() {
+
+
+    @RequestMapping(method = RequestMethod.GET)
+    public @ResponseBody List<Employee> getAllEmployees() {
 
        /*Employee e=new Employee();
         e.setId(11);

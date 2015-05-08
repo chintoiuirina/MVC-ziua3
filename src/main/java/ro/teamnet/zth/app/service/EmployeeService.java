@@ -13,4 +13,5 @@ public interface EmployeeService {
     List<Employee> findAllEmployees();
     Employee findOneEmployee(Integer Id);
 
+    public void deleteEmployee(Integer id);
 }
