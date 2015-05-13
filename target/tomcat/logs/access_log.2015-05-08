@@ -1,0 +1,13 @@
+0:0:0:0:0:0:0:1 - - [08/May/2015:16:12:00 +0300] "GET /app/mvc/employees/one HTTP/1.1" 404 949 http-bio-8080-exec-1 364
+0:0:0:0:0:0:0:1 - - [08/May/2015:16:12:07 +0300] "GET /app/mvc/employees/all HTTP/1.1" 500 3692 http-bio-8080-exec-2 51
+0:0:0:0:0:0:0:1 - - [08/May/2015:16:13:34 +0300] "GET /app/mvc/employees/all HTTP/1.1" 200 397 http-bio-8080-exec-1 825
+0:0:0:0:0:0:0:1 - - [08/May/2015:16:24:27 +0300] "GET /app/mvc/employees/one HTTP/1.1" 400 1074 http-bio-8080-exec-1 356
+0:0:0:0:0:0:0:1 - - [08/May/2015:16:24:34 +0300] "GET /app/mvc/employees/one?idEmployee=1 HTTP/1.1" 200 211 http-bio-8080-exec-2 332
+0:0:0:0:0:0:0:1 - - [08/May/2015:16:36:41 +0300] "GET /app/mvc/employees/one?iEmployee=1 HTTP/1.1" 400 1074 http-bio-8080-exec-4 3
+0:0:0:0:0:0:0:1 - - [08/May/2015:16:37:11 +0300] "GET /app/mvc/employees/one?idEmployee=1 HTTP/1.1" 200 211 http-bio-8080-exec-6 17
+0:0:0:0:0:0:0:1 - - [08/May/2015:16:47:02 +0300] "GET /app/mvc/employees/one HTTP/1.1" 404 949 http-bio-8080-exec-1 361
+0:0:0:0:0:0:0:1 - - [08/May/2015:16:47:12 +0300] "GET /app/mvc/employees/one/1 HTTP/1.1" 200 211 http-bio-8080-exec-3 309
+0:0:0:0:0:0:0:1 - - [08/May/2015:16:52:29 +0300] "GET /app/mvc/employees/1 HTTP/1.1" 200 211 http-bio-8080-exec-1 653
+0:0:0:0:0:0:0:1 - - [08/May/2015:16:52:35 +0300] "GET /app/mvc/employees HTTP/1.1" 200 397 http-bio-8080-exec-3 135
+0:0:0:0:0:0:0:1 - - [08/May/2015:17:08:11 +0300] "GET /app/mvc/employees/one HTTP/1.1" 500 3887 http-bio-8080-exec-1 434
+0:0:0:0:0:0:0:1 - - [08/May/2015:17:08:34 +0300] "DELETE /app/mvc/employees/1 HTTP/1.1" 200 6 http-bio-8080-exec-3 679
